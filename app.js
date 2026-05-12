@@ -18,7 +18,7 @@ app.post("/login", (req, res) => {
 
   const query = `SELECT * FROM users WHERE email='${email}' AND password='${password}'`;
 
-  console.log("Executing:", query);
+  console.log("Executing:", queries);
 
   const user = db.users.find(
     u => u.email === email && u.password === password
